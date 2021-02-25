@@ -17,10 +17,10 @@ router.post ('/', (req, res)=> {
 
  })
 .then (event => {
-    res.json(event)
+    res.status(201).json(event)
  })
  .catch(err => {
-     res.json(err);
+     res.status(500).json(err);
  })
 })
 
