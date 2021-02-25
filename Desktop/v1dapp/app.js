@@ -26,6 +26,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 const index = require('./routes/index');
 app.use('/', index);
 
+const user = require('./routes/user');
+app.use('/api/user', user);
+
+const event = require ('./routes/event');
+app.use ('/api/event', event);
+
+
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
