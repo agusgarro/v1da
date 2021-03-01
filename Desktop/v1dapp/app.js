@@ -10,7 +10,7 @@ const mongoose     = require ('mongoose')
 
 //database connection 
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost/v1dapp', {useNewUrlParser: true})
+  .connect('mongodb://localhost/v1dapp', { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -43,8 +43,9 @@ app.use('/', index);
 const user = require('./routes/user');
 app.use('/api/user', user);
 
-const event = require ('./routes/event');
-app.use ('/api/event', event);
+
+const event = require ('./routes/events');
+app.use ('/api/events', event);
 
 
 
