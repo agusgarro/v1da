@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Event = require('../models/Event');
-const User = require('../models/User');
+const User = require('../models/users');
 
 mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/v1dapp', {
   useNewUrlParser: true

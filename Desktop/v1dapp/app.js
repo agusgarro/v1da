@@ -43,7 +43,6 @@ app.use('/', index);
 const user = require('./routes/user');
 app.use('/api/user', user);
 
-
 const event = require ('./routes/events');
 app.use ('/api/events', event);
 
